@@ -1,0 +1,81 @@
+---
+title: "DATA 608 - Final Project Proposal"
+author: "Sie Siong Wong"
+date: "3/25/2021"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_collapsed: yes
+theme: lumen
+---
+
+# Background
+
+There are hundreds of people killed and thousands of people injured every year in motor vehicle accidents in New York City. Either it's their fault or not, they lost either their lives, loved ones, or in financial burden to pay the debt from the accidents like hospital bills and disabled to work due to injury. All these results have brought a huge pain to any single person or families in the long term. 
+
+Since humans invent the motor vehicle, safety is always the priority but those safety features cannot always fully protect them from strong momentum of collision from other vehicles or self-collision into heavy objects. Therefore, it's important to find out what are the major factors that causing accidents to happen.
+
+
+# Objective
+
+The objective of doing this project is to find out the answers for below questions through visualization and hopefully the result of the analysis can provide some useful information to government agencies to take necessary actions to enhance traffic safety in our city.
+
+1.) What is the proportion/total number of people being killed and injured in each year for each borough?\
+2.) What are the major factors contributing to the accidents in each year for each borough?\
+3.) Where are the major accidents occurred within the 5 boroughs and the top 3 factors that contribute to these accidents?\
+
+
+# Data Source
+
+I'll use the Motor Vehicle Collisions - Crashes dataset available from the NYC Open Data site. The dataset contains 1.76 million rows from July 1st of year 2012 and continue to accumulate and update every day by the Police Department (NYPD). There are total of 29 columns and mostly are in text other than ID and number of injured/killed. Out of these columns, below are the likely columns I'll use for answering above questions:
+
+- borough
+- zip code
+- latitude 
+- longitude
+- number of persons killed 
+- number of pedestrians injured 
+- number of pedestrians injured 
+- number of pedestrians killed
+- number of cyclists injured
+- number of cyclists killed
+- number of motorist injured
+- number of motorist killed
+- contributing factor vehicle 1
+- contributing factor vehicle 2
+- contributing factor vehicle 3
+- contributing factor vehicle 4
+- contributing factor vehicle 5
+
+Homepage: https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
+Data Source: https://data.cityofnewyork.us/resource/h9gi-nx95.json
+
+# Data Analysis
+
+First of all, I'll use the Socrata's SoQL to load data from the NYC Open Data site and do most of the operation in SoQL such as grouping and aggregation, when do the callback. Because the time frame for this dataset is from July 2012 till today and I'm only interested on yearly data, I'll only do grouping and aggregation from year 2013 to 2020.
+
+There are possibly of missing values. If value missing (NULL or NaN) from any columns below then will consider to exclude those rows from taking into the analysis.
+
+- borough
+- zip code
+- latitude 
+- longitude
+
+Next, I'll use the Pandas or Tidyverse package to do further summary of the result from operation in SoQL like average value and then load this result into charts. 
+
+
+# Visualization
+
+I have not decided whether to use Shiny App or Dash App for building an interactive web application of visualization. I'll likely create interactive bar charts and also an interactive map with tooltip. The packages I'll be using such as Plotly, Folium, Bokeh, Leaflet, etc., or I may leverage some of the web-based API like OpenStreetMap.
+
+I imagine there is at least a bar chart with two drop-down menus, borough and factor contributing to accidents, to show the proportion/total number of people being killed and injured. In additional to that, I'll add a NYC map with highlighting markers to indicate areas where have higher rate of accidents and hovering over those markers able to show such as top 3 contributing factors, basic summary statistics, or both. 
+
+
+
+ 
+
+
+
+
+
