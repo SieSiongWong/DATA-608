@@ -34,7 +34,7 @@ function calculateMultiple()
 
 // Load president data
 
-d3.text("https://raw.githubusercontent.com/SieSiongWong/DATA-608/main/docs/presidents.csv", function(data) {
+d3.text("presidents.csv", function(data) {
     let csv = d3.csv.parseRows(data);
 
     let container = d3.select("table")
