@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+    
+    DATA 608 - Assignment #5
+	Name - Sie Siong Wong
+	Date - 04-10-2021
+	
+-->
+
+<head>
+
+	<meta charset="utf-8"> 
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="script.js"></script>
+	<title>DATA 608 - Assignment 5</title>
+	
+</head>
+
+<body>
+
+	<h1 style="color: green">
+		Word Reversion
+	</h1>
+
+	<p>
+	Type in your words in the box below and click <span style="color:blue;font-weight:bold">"go"</span> to reverse words.
+	</p>
+
+	<form>
+	
+		<input type="text" id="inputtext" placeholder="Enter your text here..." />
+		<input type="button" onclick="reverseString()" value="go" />
+		<p>Reversed text: <span id="outputtext" style="color:blue" ;></span></p>
+		
+	</form>
+
+	<h1 style="color: green"> 
+		20 Multiples Of A Number
+	</h1>
+	
+	<p>
+	Type in your number in the box below and click <span style="color:blue;font-weight:bold">"go"</span> to show 20 multiples.
+	</p>
+
+	<form>
+	
+		<input type="number" id="inputnumber" placeholder="Enter your number here..." />
+		<input type="button" onclick="calculateMultiple()" value="go" />
+		<p id="outputnumber"></p>
+
+	</form>
+
+	<h1 style="color: green"> 
+		Presidents Data
+	</h1>
+	
+	<p>
+	Type in president name in the box below to search for height and weight.
+	</p>
+
+	<form>
+	
+		<input type="text" id="inputtext2" onkeyup="search_president()" placeholder="Enter president name here..." />
+		
+	</form><br>
+	
+	<table id=president_table>
+	
+		<style>
+			table {
+			border-collapse: collapse;
+			font: 12px sans-serif;}
+
+			td {
+			border: 1px black solid;
+			padding: 5px;}
+		</style>
+	
+	</table>
+
+</body>
+
+</html>
+
