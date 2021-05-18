@@ -1,4 +1,4 @@
-pip install dash
-pip install numpy
-pip install pandas
-pip install plotly
+py -m pip install dash
+py -m pip install numpy
+py -m pip install pandas
+py -m pip install plotly
